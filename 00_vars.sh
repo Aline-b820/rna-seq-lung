@@ -1,0 +1,13 @@
+PROJ=/data/users/abarbosa/projects/rna-seq-lung
+FASTQ=$PROJ/data/fastq
+REFS=$PROJ/refs
+ALIGN=$PROJ/align
+COUNTS=$PROJ/counts
+QC=$PROJ/qc
+RES=$PROJ/results
+CT_FASTQC=/containers/apptainer/fastqc-0.12.1.sif
+CT_HISAT2=/containers/apptainer/hisat2_samtools_408dfd02f175cd88.sif
+CT_SUBREAD=/containers/apptainer/subread_2.0.1--hed695b0_0.sif
+FA=$REFS/Mus_musculus.GRCm39.dna.primary_assembly.fa
+GTF=$REFS/Mus_musculus.GRCm39.113.gtf
+IDX=$REFS/mm39_hisat2
