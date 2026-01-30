@@ -70,7 +70,7 @@ rna-seq-lung/
 │   └── tables/
 │       ├── DESeq2_Case_DKO_vs_WT_local.csv
 │       ├── GO_BP_Case_DKO_vs_WT_local.csv
-│                          └──normalized_counts_Cxcl10_Ifng_Nos2_local.csv
+│       └──normalized_counts_Cxcl10_Ifng_Nos2_local.csv
 │
 │
 │
@@ -88,7 +88,7 @@ Reads were aligned to the *Mus musculus* reference genome (GRCm39) using **HISAT
 Alignments were converted to BAM format, sorted, and indexed using **SAMtools (v1.13)**.
 
 ### 3. Gene-level quantification  
-Gene-level read counts were generated using **featureCounts** executado como non–strand-specific (-s 0), based on Ensembl gene annotations.
+Gene-level read counts were generated using **featureCounts** non–strand-specific (-s 0), based on Ensembl gene annotations.
 
 ### 4. Exploratory data analysis  
 Differential expression analysis was performed in **R (v4.4.1)** using **DESeq2 (v1.46.0)**.  
