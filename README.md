@@ -82,7 +82,7 @@ Reads were aligned to the *Mus musculus* reference genome (GRCm39) using **HISAT
 Alignments were converted to BAM format, sorted, and indexed using **SAMtools (v1.13)**.
 
 ### 3. Gene-level quantification  
-Gene-level read counts were generated using **featureCounts** with strand option = 2, based on Ensembl gene annotations.
+Gene-level read counts were generated using **featureCounts** executado como non–strand-specific (-s 0), based on Ensembl gene annotations.
 
 ### 4. Exploratory data analysis  
 Differential expression analysis was performed in **R (v4.4.1)** using **DESeq2 (v1.46.0)**.  
