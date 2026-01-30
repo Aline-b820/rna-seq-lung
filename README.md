@@ -53,7 +53,13 @@ rna-seq-lung/
 │   ├── 03_refs_mm39.slurm
 │   ├── 04_align_mm39_per_sample.slurm
 │   ├── 05_featureCounts_mm39.slurm
-│   └── 06_deseq2_analysis.R        # Differential expression & downstream analyses
+│   ├── locall_DESeq2_plots.R
+│   ├── normalizad.R
+│   ├── Expression-plots-for-Cxcl10-Ifng-Nos2.R
+│   └── 07_GO_enrich_Case_DKO_vs_WT.R
+│   
+│   
+│  
 │
 ├── results/
 │   ├── figures/
