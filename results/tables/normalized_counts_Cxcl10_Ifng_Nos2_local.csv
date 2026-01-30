@@ -1,0 +1,16 @@
+sample,genotype,condition,group,Cxcl10,Ifng,Nos2,tissue,fastq1,fastq2
+SRR7821918,WT,Case,Lung_WT_Case,25310.01335,2887.688844,2061.651511,lung,data/fastq/SRR7821918_1.fastq.gz,data/fastq/SRR7821918_2.fastq.gz
+SRR7821919,WT,Case,Lung_WT_Case,26634.51937,3367.048103,3259.239013,lung,data/fastq/SRR7821919_1.fastq.gz,data/fastq/SRR7821919_2.fastq.gz
+SRR7821920,WT,Case,Lung_WT_Case,20223.46855,2391.768528,2760.691657,lung,data/fastq/SRR7821920_1.fastq.gz,data/fastq/SRR7821920_2.fastq.gz
+SRR7821921,WT,Case,Lung_WT_Case,25162.73057,2691.669002,4127.56891,lung,data/fastq/SRR7821921_1.fastq.gz,data/fastq/SRR7821921_2.fastq.gz
+SRR7821922,WT,Case,Lung_WT_Case,21577.31608,2220.791109,3120.074422,lung,data/fastq/SRR7821922_1.fastq.gz,data/fastq/SRR7821922_2.fastq.gz
+SRR7821923,DKO,Case,Lung_DKO_Case,103.6032062,459.4576971,712.8351036,lung,data/fastq/SRR7821923_1.fastq.gz,data/fastq/SRR7821923_2.fastq.gz
+SRR7821924,DKO,Case,Lung_DKO_Case,269.0837222,4471.719567,2068.452735,lung,data/fastq/SRR7821924_1.fastq.gz,data/fastq/SRR7821924_2.fastq.gz
+SRR7821925,DKO,Case,Lung_DKO_Case,63.49175502,1138.05976,633.7195925,lung,data/fastq/SRR7821925_1.fastq.gz,data/fastq/SRR7821925_2.fastq.gz
+SRR7821927,DKO,Case,Lung_DKO_Case,97.82514972,683.4540866,433.6033663,lung,data/fastq/SRR7821927_1.fastq.gz,data/fastq/SRR7821927_2.fastq.gz
+SRR7821937,WT,Control,Lung_WT_Control,169.2248383,28.61289537,424.2883628,lung,data/fastq/SRR7821937_1.fastq.gz,data/fastq/SRR7821937_2.fastq.gz
+SRR7821938,WT,Control,Lung_WT_Control,123.1623788,22.55085809,715.556074,lung,data/fastq/SRR7821938_1.fastq.gz,data/fastq/SRR7821938_2.fastq.gz
+SRR7821939,WT,Control,Lung_WT_Control,421.0264961,43.00808294,419.5174406,lung,data/fastq/SRR7821939_1.fastq.gz,data/fastq/SRR7821939_2.fastq.gz
+SRR7821940,DKO,Control,Lung_DKO_Control,48.61363457,10.3433265,465.4496927,lung,data/fastq/SRR7821940_1.fastq.gz,data/fastq/SRR7821940_2.fastq.gz
+SRR7821941,DKO,Control,Lung_DKO_Control,29.53798426,3.692248033,549.2218949,lung,data/fastq/SRR7821941_1.fastq.gz,data/fastq/SRR7821941_2.fastq.gz
+SRR7821942,DKO,Control,Lung_DKO_Control,28.24278383,11.76782659,350.6812325,lung,data/fastq/SRR7821942_1.fastq.gz,data/fastq/SRR7821942_2.fastq.gz
