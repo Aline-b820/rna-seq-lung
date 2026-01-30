@@ -80,26 +80,40 @@ rna-seq-lung/
 ```
 ## Analysis workflow
 
-### 1. Quality control  
+The analysis was performed using a combination of HPC-based preprocessing steps and local R-based downstream analyses. Each script used in this project is listed below with a brief purpose:
+
+### 0. Project setup and shell variables
+- **`00_setup_project.sh`** – Initializes the project directory and environment.
+- **`00_vars.sh`** – Defines global variables used across pipeline scripts.
+
+### 1. Quality control 
+- **`01_qc_fastqc.slurm`** – Runs FastQC on raw paired-end FASTQ files to assess sequence quality.
+- **`02_qc_multiqc.slurm`** – Aggregates FastQC outputs using MultiQC for summary reporting.
 Raw paired-end RNA-seq reads were assessed using **FastQC (v0.11.9)** and summarized with **MultiQC (v1.11)** to evaluate read quality, adapter content, and sequencing depth.
 
 ### 2. Read alignment  
+- **`03_refs_mm39.slurm`** – Downloads and prepares the *Mus musculus* (GRCm39) reference genome and annotation files.
+- **`04_align_mm39_per_sample.slurm`** – Performs read alignment with HISAT2 for all samples, generating sorted BAM files and alignment logs.
 Reads were aligned to the *Mus musculus* reference genome (GRCm39) using **HISAT2 (v2.2.1)** with strand-specific RF settings.  
 Alignments were converted to BAM format, sorted, and indexed using **SAMtools (v1.13)**.
 
 ### 3. Gene-level quantification  
-Gene-level read counts were generated using **featureCounts** non–strand-specific (-s 0), based on Ensembl gene annotations.
+- **`05_featureCounts_mm39.slurm`** – Uses featureCounts to generate a gene-level count matrix from aligned BAM files.
+Gene-level read counts were generated using **featureCounts** in non–strand-specific (-s 0), based on Ensembl gene annotations.
 
 ### 4. Exploratory data analysis  
-Differential expression analysis was performed in **R (v4.4.1)** using **DESeq2 (v1.46.0)**.  
 Variance stabilizing transformation (VST) was applied for exploratory analyses, including principal component analysis (PCA), to assess sample clustering and data quality.
 
 ### 5. Differential expression analysis  
-Differential expression was assessed using DESeq2.  
+Differential expression analysis was performed in **R (v4.4.1)** using **DESeq2 (v1.46.0)**.  
+- **`locall_DESeq2_plots.R`** – Performs differential expression analysis (DESeq2), PCA, and volcano plot visualization.
+- **`normalizad.R`** – Extracts normalized counts for selected genes for downstream plotting.
+- **`Expression-plots-for-Cxcl10-Ifng-Nos2.R`** – Produces expression plots for interferon-related genes of interest.
+- **`07_GO_enrich_Case_DKO_vs_WT.R`** – Conducts Gene Ontology over-representation analysis using clusterProfiler. 
 Genes with adjusted p-value (padj) < 0.05 and |log2 fold change| > 1 were considered significantly differentially expressed.
 
 ### 6. Functional enrichment analysis  
-Gene Ontology (GO) over-representation analysis (Biological Process) was performed using **clusterProfiler (v4.14.6)** and the **org.Mm.eg.db** annotation package.
+Gene Ontology (GO) over-representation analysis (Biological Process) was performed using **clusterProfiler (v4.14.6)** and the **org.Mm.eg.db** annotation package, using all expressed genes as background.
 
 ---
 
